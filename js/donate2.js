@@ -20,6 +20,22 @@ const minusBalance = newBalance - inputAmount;
 document.getElementById('new-balance').innerText = minusBalance;
 
 })
+// history part
+document.getElementById('donate-history').addEventListener('click', function () {
+    const donateNoakhali2 = document.getElementById('donatetext-2').innerText;
+    const inputAmountNumbr2 = getInputFieldValueById('input2') ;
+    // Add to history section
+    const div = document.createElement('div');
+    div.style.border = "2px solid #EEEEEE";
+    div.style.borderRadius = "10px";
+    div.style.padding = "20px";
+    div.innerHTML = `
+      <h2 class="text-black text-xl font-bold mt-5">${inputAmountNumbr2} Taka is donated to ${donateNoakhali2}</h2>
+      <p class="text-[#808080] mt-4 font-normal">Date: ${new Date().toLocaleString()}</p>
+    `;
+    
+    document.getElementById('history-section').appendChild(div);
+});
 }
 })
 

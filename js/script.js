@@ -13,3 +13,9 @@ window.addEventListener('scroll', function () {
         tobNavColor.style.backdropFilter = 'blur(0px)';
     }
 })
+
+// link pages
+document.getElementById('blog-btn').addEventListener('click', function () {
+    window.location.href = "./blog.html";
+});
+
