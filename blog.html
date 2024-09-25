@@ -1,124 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog page</title>
     <!-- DaisyUI link -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body{
-            font-family: "Lexend", sans-serif;
-        }
-        .navColor{
-          position: sticky;
-          top: 0;
-          z-index: 99;
-          width: 100%;
-          backdrop-filter: blur(0px);
-        }
-        .nav-next {
-          background-color: #f4f4f5;
-        }
+      body {
+        font-family: "Lexend", sans-serif;
+      }
+      .navColor {
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        width: 100%;
+        backdrop-filter: blur(0px);
+      }
+      .nav-next {
+        background-color: #f4f4f5;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- header section start-->
     <header class="navColor" id="nav">
-        <!-- navbar start -->
-         <div class=" lg:px-36 md:px-7 px-1 mx-auto nav-next " id="navbar-color">
+      <!-- navbar start -->
+      <div class="lg:px-36 md:px-7 px-1 mx-auto nav-next" id="navbar-color">
         <div class="navbar pt-5 p-8 mb-6">
-            <div class="navbar-start">
-              <div class="dropdown text-white">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
-                </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                  <div class="flex gap-x-3 lg:items-center">
-                    <img src="./assets/logo.png" alt="">
-                    <h2 class="text-black text-xl font-bold">Donate Bangladesh</h2>
-                  </div>
-                </ul>
+          <div class="navbar-start">
+            <div class="dropdown text-white">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
               </div>
-              <button id="home-btn" class="btn bg-[#B4F461] text-[#111111] text-xl font-semibold">Home</button>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <div class="lg:flex lg:gap-x-3 lg:items-center">
-                  <img src="./assets/logo.png" alt="">
-                  <h2 class="text-black text-xl font-bold">Donate Bangladesh</h2>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <div class="flex gap-x-3 lg:items-center">
+                  <img src="./assets/logo.png" alt="" />
+                  <h2 class="text-black text-xl font-bold">
+                    Donate Bangladesh
+                  </h2>
                 </div>
               </ul>
             </div>
-            <div class="navbar-end lg:flex gap-x-4">
-              <img src="./assets/coin.png" alt="">
-              <h2 class="text-[#6e6d6d] text-xl font-bold"><span>5500</span> BDT</h2>
-            </div>
+            <button
+              id="home-btn"
+              class="btn bg-[#B4F461] text-[#111111] text-xl font-semibold"
+            >
+              Home
+            </button>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <div class="lg:flex lg:gap-x-3 lg:items-center">
+                <img src="./assets/logo.png" alt="" />
+                <h2 class="text-black text-xl font-bold">Donate Bangladesh</h2>
+              </div>
+            </ul>
+          </div>
+          <div class="navbar-end lg:flex gap-x-4">
+            <img src="./assets/coin.png" alt="" />
+            <h2 class="text-[#6e6d6d] text-xl font-bold">
+              <span>5500</span> BDT
+            </h2>
           </div>
         </div>
-        <!-- navbar end-->
-        <div class="flex gap-x-5 justify-center pb-4">
-          <button class="btn btn-lg bg-[#B4F461] text-[#111111] text-xl font-semibold ">Donation</button>
-          <button class="btn btn-lg btn-outline text-[#6e6d6d] text-xl font-semibold ">History</button>
-        </div>
+      </div>
+      <!-- navbar end-->
+      <div class="flex gap-x-5 justify-center pb-4">
+        <button
+          class="btn btn-lg bg-[#B4F461] text-[#111111] text-xl font-semibold"
+        >
+          Donation
+        </button>
+        <button
+          class="btn btn-lg btn-outline text-[#6e6d6d] text-xl font-semibold"
+        >
+          History
+        </button>
+      </div>
     </header>
     <!-- header section end-->
     <!-- fAQ section -->
-     <div class="lg:px-36 md:px-7 px-1 mx-auto ">
-        <h2 class="text-black text-4xl font-bold my-6">Important FAQ</h2>
-    <div class="join join-vertical w-full">
+    <div class="lg:px-36 md:px-7 px-1 mx-auto">
+      <h2 class="text-black text-4xl font-bold my-6">Important FAQ</h2>
+      <div class="join join-vertical w-full">
         <div class="collapse collapse-arrow join-item border-base-300 border">
           <input type="radio" name="my-accordion-4" checked="checked" />
-          <div class="collapse-title text-xl font-medium"> 1. What is the Document Object Model (DOM)?</div>
-          <div class="collapse-content">
-            <p class="text-[#6e6d6d]">The Document Object Model (DOM) is a programming interface for HTML documents.It treats the HTML document as a tree structure where each part of the document(such as heading, paragraph, images etc.) is represented as a node.</p>
+          <div class="collapse-title text-xl font-medium">
+            1. What is the Document Object Model (DOM)?
           </div>
-        </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium"> 2. How do you select an element from the DOM?</div>
           <div class="collapse-content">
-            <p  class="text-[#6e6d6d]">Select the elements from the DOM using Javascript in the most common 4 ways:<br>1.getElementById()<br> 2.getElementsByClassName()<br> 3.getElementsByTagName()<br> 4.querySelector() & querySelectorAll()</p>
-          </div>
-        </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium"> 3. What is event delegation in the context of the DOM, and why is it useful?</div>
-          <div class="collapse-content">
-            <p  class="text-[#6e6d6d]">Event Delegation is basically a pattern to handler events efficiently.When an event occurs on a child element, it first triggers the event listener on that element.Instead of adding an event listener to each and every similar elements.It simplifies your code by centralizing event handling, reducing repetition,and avoiding issues like adding unneccessary listeners.</p>
-          </div>
-        </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-            <input type="radio" name="my-accordion-4" />
-            <div class="collapse-title text-xl font-medium">  4. How do you manipulate an element's attributes and styles using the DOM?</div>
-            <div class="collapse-content">
-              <p  class="text-[#6e6d6d]">I can access and modify an elements attributes using various methods:<br> 1.Getting Attributes 2.Setting Attributes 3.Removing Attributes 4.Property Access<br>
-            I can directly manipulate an elements using the style property:<br> 1.Accessing a Style Property 2.Setting a Style Property 3.Resetting a Style Property
+            <p class="text-[#6e6d6d]">
+              The Document Object Model (DOM) is a programming interface for
+              HTML documents.It treats the HTML document as a tree structure
+              where each part of the document(such as heading, paragraph, images
+              etc.) is represented as a node.
             </p>
-            </div>
           </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            2. How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p class="text-[#6e6d6d]">
+              Select the elements from the DOM using Javascript in the most
+              common 4 ways:<br />1.getElementById()<br />
+              2.getElementsByClassName()<br />
+              3.getElementsByTagName()<br />
+              4.querySelector() & querySelectorAll()
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            3. What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p class="text-[#6e6d6d]">
+              Event Delegation is basically a pattern to handler events
+              efficiently.When an event occurs on a child element, it first
+              triggers the event listener on that element.Instead of adding an
+              event listener to each and every similar elements.It simplifies
+              your code by centralizing event handling, reducing repetition,and
+              avoiding issues like adding unneccessary listeners.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">
+            4. How do you manipulate an element's attributes and styles using
+            the DOM?
+          </div>
+          <div class="collapse-content">
+            <p class="text-[#6e6d6d]">
+              I can access and modify an elements attributes using various
+              methods:<br />
+              1.Getting Attributes 2.Setting Attributes 3.Removing Attributes
+              4.Property Access<br />
+              I can directly manipulate an elements using the style property:<br />
+              1.Accessing a Style Property 2.Setting a Style Property
+              3.Resetting a Style Property
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-      <script src="./js/script.js"></script>
-      <script src="./js/common.js"></script>
-      <script src="./js/link.js"></script>
-</body>
+    <script src="./js/script.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/link.js"></script>
+  </body>
 </html>
